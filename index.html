@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header><button id="darkBtn">🌙 Dark Mode</button>
+            <h1>📚 STUDY PLANNER</h1>
+            <div class="completedBox">
+                <h2 id="completedDays">0 / 30</h2>
+                <p>Completed Days</p>
+            </div>
+        </header>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Day</th>
+                    <th>Today's Plan</th>
+                    <th>Hours</th>
+                    <th>Completed</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody id="plannerBody"></tbody>
+        </table>
+        <div class="streak">🔥 Current Study Streak : <span id="streak">0</span> Days</div>
+        <footer>🌟 ALL THE BEST 🌟</footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
