@@ -1,88 +1,185 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TNPSC Study Planner</title>
 
-    <title>TNPSC Study Planner</title>
-
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
+
 <body>
 
-    <header class="topHeader">
 
-        <button id="themeBtn">
-            🌙 Dark Mode
-        </button>
+<header class="homeHeader">
 
-        <h1>
-            📚 TNPSC STUDY PLANNER
-        </h1>
 
-    </header>
+<button id="themeBtn">
+🌙 Dark Mode
+</button>
 
-    <section class="home">
 
-        <h2>
-            Choose Your Planner
-        </h2>
+<h1>
+📚 TNPSC STUDY PLANNER
+</h1>
 
-        <p>
-            Plan your study smartly and achieve your goals.
-        </p>
 
-        <div class="cardContainer">
+</header>
 
-            <!-- Morning -->
 
-            <div class="card" onclick="location.href='morning.html'">
 
-                <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png">
 
-                <h2>Morning</h2>
 
-                <p>
-                    Plan your morning study
-                    <br>
-                    and boost productivity.
-                </p>
+<section class="home">
 
-                <button>
-                    Open Morning Planner →
-                </button>
 
-            </div>
+<h2>
+Choose Your Planner
+</h2>
 
-            <!-- Evening -->
 
-            <div class="card" onclick="location.href='evening.html'">
+<p>
+Plan your study smartly and achieve your goals.
+</p>
 
-                <img src="https://cdn-icons-png.flaticon.com/512/979/979585.png">
 
-                <h2>Evening</h2>
 
-                <p>
-                    Plan your evening study
-                    <br>
-                    and stay consistent.
-                </p>
 
-                <button>
-                    Open Evening Planner →
-                </button>
 
-            </div>
+<div class="cardContainer">
 
-        </div>
 
-    </section>
 
-    <script src="home.js"></script>
+<div class="card">
+
+
+<img src="https://cdn-icons-png.flaticon.com/512/869/869869.png">
+
+
+<h2>
+Morning
+</h2>
+
+
+<p>
+Plan your morning study
+<br>
+and boost productivity.
+</p>
+
+
+
+<button onclick="openMorning()">
+Open Morning Planner →
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<img src="https://cdn-icons-png.flaticon.com/512/979/979585.png">
+
+
+<h2>
+Evening
+</h2>
+
+
+<p>
+Plan your evening study
+<br>
+and stay consistent.
+</p>
+
+
+
+<button onclick="openEvening()">
+Open Evening Planner →
+</button>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<script>
+
+
+function openMorning()
+{
+window.location.href="morning.html";
+}
+
+
+function openEvening()
+{
+window.location.href="evening.html";
+}
+
+
+
+const themeBtn=document.getElementById("themeBtn");
+
+
+themeBtn.onclick=function()
+{
+
+document.body.classList.toggle("dark");
+
+
+if(document.body.classList.contains("dark"))
+{
+
+localStorage.setItem("theme","dark");
+
+themeBtn.innerHTML="☀️ Light Mode";
+
+}
+
+else
+{
+
+localStorage.setItem("theme","light");
+
+themeBtn.innerHTML="🌙 Dark Mode";
+
+}
+
+};
+
+
+
+if(localStorage.getItem("theme")=="dark")
+{
+
+document.body.classList.add("dark");
+
+themeBtn.innerHTML="☀️ Light Mode";
+
+}
+
+
+</script>
+
+
 
 </body>
 

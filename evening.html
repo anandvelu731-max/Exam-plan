@@ -1,120 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
 
-    <meta charset="UTF-8">
+<title>Evening Planner</title>
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Evening Study Planner</title>
-
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
+
 <body>
 
-    <header class="plannerHeader">
 
-        <button
-            class="backBtn"
-            onclick="location.href='index.html'">
+<div class="container">
 
-            ← Back
 
-        </button>
+<header>
 
-        <h1>
+<button class="backBtn" onclick="goBack()">
+⬅ Back
+</button>
 
-            🌙 EVENING STUDY PLANNER
 
-        </h1>
+<h1>
+Evening Study Planner
+</h1>
 
-        <button id="themeBtn">
 
-            🌙 Dark Mode
+<button id="themeBtn">
+🌙 Dark Mode
+</button>
 
-        </button>
 
-    </header>
+</header>
 
-    <div class="dashboard">
 
-        <div class="completedBox">
 
-            <h2 id="completedDays">
+<div class="topBoxes">
 
-                0 / 162
 
-            </h2>
+<div class="box">
 
-            <p>
+<h2 id="completedDays">
+0 / 162
+</h2>
 
-                Completed Days
+<p>
+Completed Days
+</p>
 
-            </p>
+</div>
 
-        </div>
 
-        <div class="streakBox">
 
-            <h2 id="streak">
+<div class="box">
 
-                0
+<h2 id="streak">
+0
+</h2>
 
-            </h2>
+<p>
+🔥 Study Streak
+</p>
 
-            <p>
+</div>
 
-                Study Streak
 
-            </p>
+</div>
 
-        </div>
 
-    </div>
 
-    <div class="tableContainer">
 
-        <table>
+<div class="tableDiv">
 
-            <thead>
 
-                <tr>
+<table>
 
-                    <th>Date</th>
 
-                    <th>Day</th>
+<thead>
 
-                    <th>Today's Plan</th>
+<tr>
 
-                    <th>Hours</th>
+<th>
+Date
+</th>
 
-                    <th>Completed</th>
+<th>
+Day
+</th>
 
-                    <th>Result</th>
+<th>
+Today's Plan
+</th>
 
-                </tr>
+<th>
+Hours
+</th>
 
-            </thead>
+<th>
+Completed
+</th>
 
-            <tbody id="plannerBody">
+<th>
+Result
+</th>
 
-            </tbody>
 
-        </table>
+</tr>
 
-    </div>
 
-    <footer>
+</thead>
 
-        🌟 ALL THE BEST 🌟
 
-    </footer>
+<tbody id="plannerBody">
 
-    <script src="evening.js"></script>
+
+</tbody>
+
+
+</table>
+
+
+</div>
+
+
+
+<footer>
+
+All the best 🚀
+
+</footer>
+
+
+
+</div>
+
+
+
+<script src="evening.js"></script>
+
 
 </body>
 
