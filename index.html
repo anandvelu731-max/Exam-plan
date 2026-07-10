@@ -1,39 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Study Planner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TNPSC Study Planner</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-    <div class="container">
-        <header><button id="darkBtn">🌙 Dark Mode</button>
-            <h1>📚 STUDY PLANNER</h1>
-            <div class="completedBox">
-                <h2 id="completedDays">0 / 30</h2>
-                <p>Completed Days</p>
+
+    <header class="topHeader">
+
+        <button id="themeBtn">
+            🌙 Dark Mode
+        </button>
+
+        <h1>
+            📚 TNPSC STUDY PLANNER
+        </h1>
+
+    </header>
+
+    <section class="home">
+
+        <h2>
+            Choose Your Planner
+        </h2>
+
+        <p>
+            Plan your study smartly and achieve your goals.
+        </p>
+
+        <div class="cardContainer">
+
+            <!-- Morning -->
+
+            <div class="card" onclick="location.href='morning.html'">
+
+                <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png">
+
+                <h2>Morning</h2>
+
+                <p>
+                    Plan your morning study
+                    <br>
+                    and boost productivity.
+                </p>
+
+                <button>
+                    Open Morning Planner →
+                </button>
+
             </div>
-        </header>
-        <table>
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Day</th>
-                    <th>Today's Plan</th>
-                    <th>Hours</th>
-                    <th>Completed</th>
-                    <th>Result</th>
-                </tr>
-            </thead>
-            <tbody id="plannerBody"></tbody>
-        </table>
-        <div class="streak">🔥 Current Study Streak : <span id="streak">0</span> Days</div>
-        <footer>🌟 ALL THE BEST 🌟</footer>
-    </div>
-    <script src="script.js"></script>
+
+            <!-- Evening -->
+
+            <div class="card" onclick="location.href='evening.html'">
+
+                <img src="https://cdn-icons-png.flaticon.com/512/979/979585.png">
+
+                <h2>Evening</h2>
+
+                <p>
+                    Plan your evening study
+                    <br>
+                    and stay consistent.
+                </p>
+
+                <button>
+                    Open Evening Planner →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="home.js"></script>
+
 </body>
 
 </html>

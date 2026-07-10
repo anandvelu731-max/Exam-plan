@@ -1,120 +1,487 @@
 *{
+    margin:0;
+    padding:0;
     box-sizing:border-box;
-    font-family:Arial;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-    margin:0;
-    background:#f4f4f4;
+    background:#f5f5f5;
+    color:#222;
 }
 
-.container{
-    width:95%;
-    margin:20px auto;
-}
+/* ---------- Header ---------- */
 
-header{
+.topHeader{
+    background:#8B0000;
+    color:white;
+    padding:20px 40px;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:#8B0000;
-    color:#fff;
-    padding:15px;
-    border-radius:8px 8px 0 0;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.2);
 }
 
-#darkBtn{
-    background:#000;
-    color:#fff;
-    padding:10px;
+.topHeader h1{
+    font-size:35px;
+    letter-spacing:1px;
+}
+
+#themeBtn{
+
+    background:black;
+    color:white;
+
     border:none;
-    border-radius:6px;
+
+    padding:12px 25px;
+
+    border-radius:8px;
+
     cursor:pointer;
+
+    transition:.3s;
+
 }
 
-.completedBox{
-    background:#000;
-    color:#fff;
-    padding:10px 15px;
-    border-radius:8px;
+#themeBtn:hover{
+
+    background:#444;
+
+}
+
+/* ---------- Home ---------- */
+
+.home{
+
+    width:90%;
+
+    margin:auto;
+
     text-align:center;
+
+    padding:40px 0;
+
+}
+
+.home h2{
+
+    color:#8B0000;
+
+    font-size:35px;
+
+}
+
+.home p{
+
+    margin-top:15px;
+
+    font-size:18px;
+
+}
+
+/* ---------- Cards ---------- */
+
+.cardContainer{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:60px;
+
+    margin-top:60px;
+
+    flex-wrap:wrap;
+
+}
+
+.card{
+
+    width:350px;
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+
+    cursor:pointer;
+
+    transition:.4s;
+
+    border:3px solid transparent;
+
+}
+
+.card:hover{
+
+    transform:translateY(-15px) scale(1.05);
+
+    border:3px solid #8B0000;
+
+    box-shadow:0 20px 35px rgba(0,0,0,.35);
+
+}
+
+.card img{
+
+    width:120px;
+
+    margin-top:25px;
+
+}
+
+.card h2{
+
+    margin-top:20px;
+
+    color:#8B0000;
+
+}
+
+.card p{
+
+    margin:20px;
+
+    color:#555;
+
+    line-height:28px;
+
+}
+
+.card button{
+
+    margin-bottom:25px;
+
+    background:#8B0000;
+
+    color:white;
+
+    border:none;
+
+    padding:14px 30px;
+
+    border-radius:8px;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.card button:hover{
+
+    background:black;
+
+}
+
+/* ---------- Dark Mode ---------- */
+
+.dark{
+
+    background:#181818;
+
+    color:white;
+
+}
+
+.dark .card{
+
+    background:#252525;
+
+    color:white;
+
+}
+
+.dark .card h2{
+
+    color:#ff6b6b;
+
+}
+
+.dark .card p{
+
+    color:#ddd;
+
+}
+
+.dark .topHeader{
+
+    background:black;
+
+}
+
+.dark #themeBtn{
+
+    background:#8B0000;
+
+}
+
+.dark .card button{
+
+    background:#8B0000;
+
+}
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:900px){
+
+.cardContainer{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.topHeader{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.topHeader h1{
+
+font-size:28px;
+
+text-align:center;
+
+}
+
+.card{
+
+width:90%;
+
+}
+
+}
+/* ---------- Planner Page ---------- */
+
+.plannerHeader{
+
+    background:#8B0000;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px;
+
+}
+
+.backBtn{
+
+    background:black;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 20px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+.dashboard{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    margin:25px;
+
+}
+
+.streakBox,
+.completedBox{
+
+    background:#8B0000;
+
+    color:white;
+
+    width:180px;
+
+    text-align:center;
+
+    padding:20px;
+
+    border-radius:12px;
+
+}
+
+.tableContainer{
+
+    width:98%;
+
+    margin:20px auto;
+
+    overflow-x:auto;
+
 }
 
 table{
-    width:100%;
-    border-collapse:collapse;
-    background:#fff;
-}
 
-th,
-td{
-    border:1px solid #ccc;
-    padding:10px;
-    vertical-align:top;
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:#fff;
+
+    table-layout:fixed;
+
 }
 
 th{
-    background:#000;
-    color:#fff;
-    position:sticky;
-    top:0;
+
+    background:#8B0000;
+
+    color:white;
+
+    padding:12px;
+
+    border:1px solid #ddd;
+
+    text-align:center;
+
+}
+
+td{
+
+    border:1px solid #ddd;
+
+    padding:10px;
+
+    vertical-align:top;
+
+    text-align:center;
+
+}
+
+th:nth-child(1),
+td:nth-child(1){
+
+    width:120px;
+
+}
+
+th:nth-child(2),
+td:nth-child(2){
+
+    width:80px;
+
+}
+
+th:nth-child(3),
+td:nth-child(3){
+
+    width:420px;
+
+}
+
+th:nth-child(4),
+td:nth-child(4){
+
+    width:100px;
+
+}
+
+th:nth-child(5),
+td:nth-child(5){
+
+    width:120px;
+
+}
+
+th:nth-child(6),
+td:nth-child(6){
+
+    width:120px;
+
 }
 
 .topic{
+
     display:flex;
+
     align-items:center;
-    margin:4px 0;
+
+    gap:10px;
+
+    margin:6px 0;
+
 }
 
 .topic input[type="text"]{
-    border:none;
-    border-bottom:1px solid #aaa;
-    flex:1;
-    margin-left:6px;
-    outline:none;
-    background:transparent;
+
+    width:100%;
+
+    padding:7px;
+
+    border:1px solid #bbb;
+
+    border-radius:5px;
+
 }
+
+/* .topic input[type="text"]{
+
+    flex:1;
+
+    border:none;
+
+    border-bottom:1px solid gray;
+
+    margin-left:8px;
+
+    padding:4px;
+
+    outline:none;
+
+} */
 
 .hours{
-    width:60px;
-}
 
-footer,
-.streak{
+    width:70px;
+
+    padding:6px;
+
     text-align:center;
-    background:#000;
-    color:#fff;
-    padding:15px;
-    margin-top:15px;
-    border-radius:8px;
-}
 
-.streak{
-    background:#8B0000;
 }
-
 .done{
-    background:#e7ffe7;
+
+    background:#d8ffd8;
+
 }
 
-.dark{
+.dark .plannerHeader{
+
+    background:black;
+
+}
+
+.dark .completedBox,
+.dark .streakBox{
+
     background:#222;
-    color:#fff;
-}
 
-.dark table{
-    background:#333;
-    color:#fff;
-}
-
-.dark th{
-    background:#550000;
-}
-
-.dark td{
-    border-color:#666;
-}
-
-.dark .topic input[type="text"]{
-    color:#fff;
 }
